@@ -1,3 +1,39 @@
+// Chặn F12, Ctrl+Shift+I/J/C, Ctrl+U
+document.addEventListener('keydown', function (e) {
+    // F12
+    if (e.key === 'F12') {
+        e.preventDefault();
+        return false;
+    }
+    // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+    if (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) {
+        e.preventDefault();
+        return false;
+    }
+    // Ctrl+U
+    if (e.ctrlKey && e.key.toUpperCase() === 'U') {
+        e.preventDefault();
+        return false;
+    }
+});
+
+// Chặn chuột phải
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    return false;
+});
+
+// Phát hiện mở DevTools qua kích thước cửa sổ (thủ thuật nâng cao)
+(function () {
+    const threshold = 160; // chiều rộng/chiều cao tối thiểu của devtools
+    setInterval(function () {
+        if (window.outerWidth - window.innerWidth > threshold ||
+            window.outerHeight - window.innerHeight > threshold) {
+            document.body.innerHTML = "<h2 style='text-align:center;margin-top:20%;'>DevTools bị khóa 🚫</h2>";
+        }
+    }, 500);
+})();
+
 // Dark mode toggle
 const themeToggle = document.getElementById('themeToggle');
 themeToggle.addEventListener('click', function () {
