@@ -24,15 +24,15 @@ document.addEventListener('contextmenu', function (e) {
 });
 
 // Phát hiện mở DevTools qua kích thước cửa sổ (thủ thuật nâng cao)
-(function () {
-    const threshold = 160; // chiều rộng/chiều cao tối thiểu của devtools
-    setInterval(function () {
-        if (window.outerWidth - window.innerWidth > threshold ||
-            window.outerHeight - window.innerHeight > threshold) {
-            document.body.innerHTML = "<h2 style='text-align:center;margin-top:20%;'>DevTools bị khóa 🚫</h2>";
-        }
-    }, 500);
-})();
+// (function () {
+//     const threshold = 160; // chiều rộng/chiều cao tối thiểu của devtools
+//     setInterval(function () {
+//         if (window.outerWidth - window.innerWidth > threshold ||
+//             window.outerHeight - window.innerHeight > threshold) {
+//             document.body.innerHTML = "<h2 style='text-align:center;margin-top:20%;'>DevTools bị khóa 🚫</h2>";
+//         }
+//     }, 500);
+// })();
 
 // Dark mode toggle
 const themeToggle = document.getElementById('themeToggle');
