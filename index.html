@@ -1,351 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lê Vũ Luân</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-    <body>
-        <div class="loading-screen">
-            <div class="loading-text">XIN CHÀO</div>
-        </div>
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio cá nhân của Lê Vũ Luân - Software Developer và Business Analyst." />
+    <meta name="theme-color" content="#6366f1" />
+    <meta property="og:title" content="Lê Vũ Luân | Software Developer & Business Analyst" />
+    <meta property="og:description" content="Lập trình phát triển phần mềm, phân tích nghiệp vụ và tư vấn giải pháp công nghệ." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/img/avatar.jpg" />
+    <title>Lê Vũ Luân | Software Developer & Business Analyst</title>
+    <link rel="icon" type="image/jpeg" href="./assets/img/avatar.jpg" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="loading-screen" aria-hidden="true"><span>XIN CHÀO</span></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header" id="siteHeader">
+      <nav class="nav-container" aria-label="Điều hướng chính">
+        <a class="brand" href="#home" aria-label="Về đầu trang"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>LÊ VŨ LUÂN</span></a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">Thông tin chung</a></li>
+          <li><a href="#experience">Kinh nghiệm làm việc</a></li>
+          <li><a href="#projects">Dự án đã thực hiện</a></li>
+          <li class="nav-dropdown"><button class="dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">Hình ảnh hoạt động <i class="fas fa-chevron-down" aria-hidden="true"></i></button><ul class="dropdown-menu" aria-label="Nhóm hình ảnh"><li><button type="button" data-gallery-tab="work"><i class="fas fa-briefcase" aria-hidden="true"></i> Công việc</button></li><li><button type="button" data-gallery-tab="social"><i class="fas fa-users" aria-hidden="true"></i> Hoạt động khác</button></li></ul></li>
+          <li><a href="#contact">Liên hệ</a></li>
+          <li><button class="theme-toggle" id="themeToggle" type="button" aria-label="Chuyển sang giao diện tối" aria-pressed="false"><i class="fas fa-moon" aria-hidden="true"></i></button></li>
+        </ul>
+      </nav>
+    </header>
 
-        <div class="scroll-progress"></div>
+    <main>
+      <section id="home" class="hero section-shell" aria-labelledby="hero-title"><div class="hero-decoration hero-decoration-one" aria-hidden="true"></div><div class="hero-decoration hero-decoration-two" aria-hidden="true"></div><div class="container hero-grid">
+        <div class="hero-copy reveal"><h1 id="hero-title">LÊ VŨ LUÂN</h1><p class="hero-role">Software Developer <span>&amp;</span> Business Analyst</p><p class="hero-description">Lập trình phát triển phần mềm, phân tích nghiệp vụ và tư vấn giải pháp chuyển đổi số. Yêu thích nghiên cứu, học tập và ứng dụng công nghệ vào thực tiễn.</p><div class="hero-actions"><a class="button button-primary" href="#contact"><i class="fas fa-envelope" aria-hidden="true"></i> Liên hệ với tôi</a><a class="button button-secondary" href="#projects"><i class="fas fa-layer-group" aria-hidden="true"></i> Xem các dự án</a></div></div>
+        <div class="hero-portrait reveal reveal-delay" aria-label="Ảnh chân dung Lê Vũ Luân"><div class="portrait-orbit orbit-one" aria-hidden="true"></div><div class="portrait-orbit orbit-two" aria-hidden="true"></div><span class="portrait-dot dot-one" aria-hidden="true"></span><span class="portrait-dot dot-two" aria-hidden="true"></span><img src="./assets/img/avatar.jpg" alt="Chân dung Lê Vũ Luân" class="profile-img" fetchpriority="high" /></div>
+        <div class="hero-focus reveal reveal-delay-two"><p class="eyebrow">LĨNH VỰC QUAN TÂM</p><ul class="check-list"><li>Phát triển phần mềm</li><li>Phân tích nghiệp vụ (BA)</li><li>Chuyển đổi số</li><li>Nghiên cứu và ứng dụng AI</li><li>Giảng dạy &amp; chia sẻ kiến thức</li></ul></div>
+      </div></section>
 
-        <nav>
-            <div class="nav-container">
-                <div class="logo">LÊ VŨ LUÂN</div>
-                <button class="nav-toggle" id="navToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#home">Trang chủ</a></li>
-                    <li><a href="#about">Giới thiệu</a></li>
-                    <li><a href="#projects">Dự án</a></li>
-                    <li><a href="#experience">Kinh nghiệm</a></li>
-                    <li><a href="#activities">Một số hình ảnh</a></li>
-                    <li><a href="#contact">Liên hệ</a></li>
-                    <li><button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button></li>
-                </ul>
-            </div>
-        </nav>
+      <section id="about" class="section-shell" aria-labelledby="about-title"><div class="container"><div class="section-heading"><span class="section-icon"><i class="fas fa-user" aria-hidden="true"></i></span><h2 id="about-title">Thông tin chung</h2><span class="heading-line"></span></div><div class="about-grid"><div class="about-copy reveal"><p>Xin chào, mình là Lê Vũ Luân — một lập trình viên và Chuyên viên phân tích nghiệp vụ (Business Analyst) với 1 năm kinh nghiệm trong phát triển website và phân tích dự án. Mình yêu thích việc biến các vấn đề phức tạp thành những giải pháp đơn giản, thân thiện với người dùng, kết nối kỹ năng kỹ thuật với nhu cầu thực tế của khách hàng.</p><p class="update-note"><i class="fas fa-circle-info" aria-hidden="true"></i> Thông tin học vấn sau đại học chưa có trong dữ liệu gốc; cần cập nhật khi được xác nhận.</p></div><div class="info-cards"><article class="info-card reveal"><i class="fas fa-graduation-cap" aria-hidden="true"></i><h3>Học vấn</h3><p>Kỹ sư phần mềm<br />Đại học Cần Thơ<br /><small>2020 – 2024</small></p></article><article class="info-card reveal"><i class="fas fa-laptop-code" aria-hidden="true"></i><h3>Chuyên môn</h3><p>Phát triển phần mềm<br />Phân tích nghiệp vụ</p></article><article class="info-card reveal"><i class="fas fa-layer-group" aria-hidden="true"></i><h3>Lĩnh vực quan tâm</h3><p>Chuyển đổi số<br />AI và dữ liệu</p></article><article class="info-card reveal"><i class="fas fa-heart" aria-hidden="true"></i><h3>Định hướng</h3><p>Ứng dụng công nghệ<br />vì cộng đồng</p></article></div></div></div></section>
 
-        <main>
-            <!-- Hero Section -->
-            <section id="home" class="hero">
-                <div class="container">
-                    <div class="hero-content">
-                        <div class="hero-text">
-                            <h1>LÊ VŨ LUÂN</h1>
-                            <p class="title">Software Developer & Business Analyst</p>
-                            <p class="tagline">Lập trình website và Phân tích dự án, yêu cầu phần mềm</p>
-                            <div class="hero-buttons">
-                                <a href="#contact" class="btn btn-primary">
-                                    <i class="fas fa-envelope"></i>
-                                    Liên hệ
-                                </a>
-                                <a href="#projects" class="btn btn-secondary">
-                                    <i class="fas fa-code"></i>
-                                    Xem thông tin dự án
-                                </a>
-                                <!-- <a href="assets/resume.pdf" class="btn btn-secondary" download>
-                                    <i class="fas fa-download"></i>
-                                    Download My CV
-                                </a> -->
-                            </div>
-                        </div>
-                        <div class="hero-image">
-                            <img src="./assets/img/avatar.jpg" alt="LVLuan" class="profile-img">
-                        </div>
-                    </div>
-                </div>
-            </section>
+      <section id="experience" class="section-shell" aria-labelledby="experience-title"><div class="container"><div class="section-heading"><span class="section-icon"><i class="fas fa-briefcase" aria-hidden="true"></i></span><h2 id="experience-title">Kinh nghiệm làm việc</h2><span class="heading-line"></span></div><div class="experience-list"><article class="experience-item reveal"><time datetime="2024-12">12/2024 – Hiện tại</time><span class="timeline-dot" aria-hidden="true"></span><div class="experience-card"><h3>Lập trình website – Tư vấn phần mềm</h3><p class="role-label">Fulltime</p><ul><li>Xây dựng website theo yêu cầu khách hàng.</li><li>Tư vấn giải pháp phần mềm cho khách hàng.</li></ul></div></article><article class="experience-item reveal"><time datetime="2024-10">10/2024 – 12/2024</time><span class="timeline-dot" aria-hidden="true"></span><div class="experience-card"><h3>Xây dựng Dashboard website với React</h3><p class="role-label">Quản lý trang trại thông minh</p><ul><li>Xây dựng Dashboard quản lý các chỉ số thiết bị IoT tại vùng nuôi thủy sản.</li><li>Điều khiển thiết bị cảm biến.</li></ul></div></article><article class="experience-item reveal"><time datetime="2020">2020 – 10/2024</time><span class="timeline-dot" aria-hidden="true"></span><div class="experience-card"><h3>Part-time Jobs</h3><p class="role-label">Các công việc part-time dành cho sinh viên</p><ul><li>Cài đặt phần mềm, lắp đặt máy tính và các công việc hỗ trợ kỹ thuật.</li></ul></div></article></div></div></section>
 
-            <!-- About Section -->
-            <section id="about">
-                <div class="container">
-                    <h2 class="section-title">Giới thiệu</h2>
-                    <div class="about-content">
-                        <div class="about-text">
-                            <p>Xin chào, mình là Lê Vũ Luân — một lập trình viên và Chuyên viên phân tích nghiệp vụ (Business Analyst) với 1 năm kinh nghiệm trong phát triển website và phân tích dự án.
-    Mình yêu thích việc biến các vấn đề phức tạp thành những giải pháp đơn giản, thân thiện với người dùng. Công việc của mình kết hợp giữa kỹ năng kỹ thuật và tư duy kinh doanh, giúp kết nối hiệu quả giữa lập trình và nhu cầu thực tế của khách hàng.</p>
-                        </div>
-                        <div class="skills-grid">
-                            <div class="skill-item">
-                                <i class="fab fa-js-square"></i>
-                                <h4>JavaScript</h4>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-react"></i>
-                                <h4>React</h4>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-node-js"></i>
-                                <h4>Node.js</h4>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-php"></i>
-                                <h4>PHP</h4>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fas fa-database"></i>
-                                <h4>SQL</h4>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-aws"></i>
-                                <h4>AWS</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+      <section id="projects" class="section-shell" aria-labelledby="projects-title"><div class="container"><div class="section-heading"><span class="section-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></span><h2 id="projects-title">Dự án đã thực hiện</h2><span class="heading-line"></span></div><div class="projects-grid"><article class="project-card reveal"><div class="project-visual visual-a"><i class="fas fa-water" aria-hidden="true"></i><span>SmartAqua</span></div><div class="project-body"><span class="project-status">NỘI DUNG CẦN CẬP NHẬT</span><h3>SmartAqua Eel</h3><p>Nền tảng quản lý nuôi lươn thông minh tích hợp AI. Thông tin chi tiết cần được xác nhận trước khi công bố.</p><div class="tags"><span>Web</span><span>GIS</span><span>AI</span><span>Dashboard</span></div><div class="project-actions"><a class="button button-small button-primary" href="https://github.com/LVLuan6594" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></div></div></article><article class="project-card reveal"><div class="project-visual visual-b"><i class="fas fa-city" aria-hidden="true"></i><span>Chính quyền số</span></div><div class="project-body"><span class="project-status">NỘI DUNG CẦN CẬP NHẬT</span><h3>Giải pháp Chính quyền số cấp xã</h3><p>Dự án minh họa đang chờ bổ sung mô tả, vai trò và đường dẫn công khai.</p><div class="tags"><span>Web</span><span>CSDL</span><span>Liên thông</span><span>Báo cáo</span></div></div></article><article class="project-card reveal"><div class="project-visual visual-c"><i class="fas fa-seedling" aria-hidden="true"></i><span>AI &amp; Computer Vision</span></div><div class="project-body"><span class="project-status">NỘI DUNG CẦN CẬP NHẬT</span><h3>Mô hình da màu phát hiện bệnh trên lúa</h3><p>Thông tin dự án, vai trò tham gia và tài liệu công bố cần được cập nhật.</p><div class="tags"><span>AI</span><span>Computer Vision</span><span>Deep Learning</span></div></div></article></div></div></section>
 
-            <!-- Education Section -->
-            <section id="education">
-                <div class="container">
-                    <h2 class="section-title">Quá Trình Học Vấn</h2>
-                    <div class="education-timeline">
-                        <div class="education-item">
-                            <div class="education-date">2020 - 2024</div>
-                            <div class="education-content">
-                                <h3>Đại học Cần Thơ</h3>
-                                <p>Chuyên ngành: Kỹ sư phần mềm</p>
-                                <p>Thành tích: Đạt học bổng khuyến khích học tập nhiều học kỳ, tham gia các hoạt động nghiên cứu khoa học và CLB Tình nguyện.</p>
-                            </div>
-                        </div>
-                        <!-- Bạn có thể thêm nhiều education-item nếu muốn -->
-                    </div>
-                </div>
-            </section>
+      <section id="activities" class="section-shell" aria-labelledby="activities-title"><div class="container"><div class="section-heading"><span class="section-icon"><i class="fas fa-image" aria-hidden="true"></i></span><h2 id="activities-title">Hình ảnh hoạt động</h2><span class="heading-line"></span></div><div class="gallery-tabs" role="tablist" aria-label="Nhóm hình ảnh"><button class="gallery-tab is-active" type="button" role="tab" aria-selected="true" data-gallery-tab="work"><i class="fas fa-briefcase" aria-hidden="true"></i> Công việc</button><button class="gallery-tab" type="button" role="tab" aria-selected="false" data-gallery-tab="social"><i class="fas fa-users" aria-hidden="true"></i> Hoạt động khác</button></div><div class="gallery-panel" id="galleryPanel" role="tabpanel"><div class="gallery-track" id="galleryTrack"></div><button class="gallery-arrow gallery-prev" type="button" aria-label="Ảnh trước"><i class="fas fa-chevron-left" aria-hidden="true"></i></button><button class="gallery-arrow gallery-next" type="button" aria-label="Ảnh tiếp theo"><i class="fas fa-chevron-right" aria-hidden="true"></i></button></div><p class="update-note gallery-note"><i class="fas fa-circle-info" aria-hidden="true"></i> Hình ảnh được nạp từ <code>assets/img/work</code> và <code>assets/img/social</code>.</p></div></section>
 
-            <!-- Projects Section -->
-            <section id="projects">
-                <div class="container">
-                    <h2 class="section-title">Featured Projects</h2>
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <div class="project-image">
-                                <i class="fas fa-shopping-cart"></i>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">Test</h3>
-                                <p class="project-description">TEST</p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">React</span>
-                                    <span class="tech-tag">Node.js</span>
-                                    <span class="tech-tag">MongoDB</span>
-                                    <span class="tech-tag">Stripe</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                    <a href="https://github.com/LVLuan6594" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-image">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">Analytics Dashboard</h3>
-                                <p class="project-description">TEST</p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">Vue.js</span>
-                                    <span class="tech-tag">D3.js</span>
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">PostgreSQL</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                    <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-image">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">Mobile Task Manager</h3>
-                                <p class="project-description">TEST</p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">React Native</span>
-                                    <span class="tech-tag">Firebase</span>
-                                    <span class="tech-tag">Redux</span>
-                                    <span class="tech-tag">TypeScript</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                    <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-image">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">TEST</h3>
-                                <p class="project-description">TEST</p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">TensorFlow</span>
-                                    <span class="tech-tag">Flask</span>
-                                    <span class="tech-tag">Docker</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                    <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Experience Section -->
-            <section id="experience">
-                <div class="container">
-                    <h2 class="section-title">KINH NGHIỆM LÀM VIỆC</h2>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-date">12/2024 - Hiện tại</div>
-                                <h3 class="timeline-title">Lập trình website - Tư vấn phần mềm</h3>
-                                <p class="timeline-company">Fulltime</p>
-                                <p>Xây dựng website theo yêu cầu khách hàng.</p>
-                                <p>Tư vấn giải pháp phần mềm cho khàng hàng.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-date">10/2024 - 12/2024</div>
-                                <h3 class="timeline-title">Xây dựng Dashboard website với React</h3>
-<!--                                 <p class="timeline-company">StartupHub Inc.</p> -->
-                                <p>Quản lý trang trại thông minh: Xây dựng Dashboard Quản lý các chỉ số thiết bị IoT tại vùng nuôi thủy sản và Điều khiển thiết bị cảm biến</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-date">2020 - 10/2024</div>
-                                <h3 class="timeline-title">Part-time Jobs</h3>
-                                <p class="timeline-company">Các công việc part-time dành cho sinh viên</p>
-                                <p>Thực hiện các công việc part-time như: cài đặt phần mềm, lắp đặt máy tính,....</p>
-                            </div>
-                        </div>
-
-                        <!-- <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-date">2017 - 2018</div>
-                                <h3 class="timeline-title">Junior Developer</h3>
-                                <p class="timeline-company">CodeCraft Agency</p>
-                                <p>Started my journey in software development, working on various client projects and learning modern web technologies. Contributed to open-source projects and participated in code reviews.</p>
-                            </div>
-                        </div> -->
-                    </div>
-                </div>
-            </section>
-
-            <!-- Hoạt động Section -->
-            <section id="activities">
-                <div class="container">
-                    <h2 class="section-title">Một Số Hình Ảnh Hoạt Động</h2>
-                    <div class="activities-grid">
-                        <div class="activity-img">
-                            <img src="assets/img/active1.jpg" alt="Hoạt động 1">
-                        </div>
-                        <div class="activity-img">
-                            <img src="assets/img/active2.jpg" alt="Hoạt động 2">
-                        </div>
-                        <div class="activity-img">
-                            <img src="assets/img/active3.jpg" alt="Hoạt động 3">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact">
-    <div class="container">
-        <h2 class="section-title">LIÊN HỆ VỚI TÔI</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <h3>Liên hệ</h3>
-
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>01 Lý Tự Trọng, phường Ninh Kiều, thành phố Cần Thơ</span>
-                </div>
-
-                <!-- Gọi điện khi click -->
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <a href="tel:+84366183317">+84 366 183 317</a>
-                </div>
-
-                <!-- Mở app email khi click -->
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:lvluan@ctu.edu.vn">lvluan@ctu.edu.vn</a>
-                </div>
-
-                <div class="social-links">
-                    <a href="https://www.facebook.com/vu.luan.108437/" class="social-link" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="mailto:lvluan@ctu.edu.vn" class="social-link" target="_blank">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/ken-l-ab175b185/" class="social-link" target="_blank">    
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/LVLuan6594" class="social-link" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="contact-form">
-                <h3>Hãy để lại thông tin của bạn!</h3>
-                <form action="#">
-                    <div class="form-group">
-                        <label for="name">Họ tên</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Lời nhắn gửi</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i>
-                        Gửi
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-        </main>
-
-        <footer>
-            <div class="container">
-                <p>&copy; 2025 Lê Vũ Luân. All Rights Reserved.</p>
-            </div>
-        </footer>
+      <section id="contact" class="section-shell" aria-labelledby="contact-title"><div class="container"><div class="section-heading"><span class="section-icon"><i class="fas fa-paper-plane" aria-hidden="true"></i></span><h2 id="contact-title">Liên hệ</h2><span class="heading-line"></span></div><div class="contact-grid"><div class="contact-info reveal"><h3>Kết nối với tôi</h3><div class="contact-line"><i class="fas fa-location-dot" aria-hidden="true"></i><span>01 Lý Tự Trọng, phường Ninh Kiều, thành phố Cần Thơ</span></div><div class="contact-line"><i class="fas fa-phone" aria-hidden="true"></i><a href="tel:+84366183317">+84 366 183 317</a></div><div class="contact-line"><i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:lvluan@ctu.edu.vn">lvluan@ctu.edu.vn</a></div><div class="social-links" aria-label="Mạng xã hội"><a href="https://www.facebook.com/vuluan652024" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a><a href="mailto:lvluan@ctu.edu.vn" class="social-link" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a><a href="https://www.linkedin.com/in/ken-l-ab175b185/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a><a href="https://github.com/LVLuan6594" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></div></div><form class="contact-form reveal" id="contactForm" novalidate><h3>Gửi lời nhắn cho tôi</h3><p class="form-note">Biểu mẫu hiện mở ứng dụng email mặc định trên thiết bị của bạn.</p><div class="form-grid"><label><span>Họ và tên</span><input type="text" id="name" name="name" autocomplete="name" required placeholder="Họ tên của bạn" /></label><label><span>Email</span><input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com" /></label></div><label><span>Nội dung tin nhắn</span><textarea id="message" name="message" rows="5" required placeholder="Bạn muốn trao đổi điều gì?"></textarea></label><p class="form-error" id="formError" role="alert" aria-live="polite"></p><button class="button button-primary" type="submit"><i class="fas fa-paper-plane" aria-hidden="true"></i> Gửi tin nhắn</button></form></div></div></section>
+    </main>
+    <footer class="site-footer"><div class="container footer-content"><a class="brand brand-footer" href="#home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>LÊ VŨ LUÂN</span></a><p>© <span id="currentYear">2025</span> Lê Vũ Luân. All Rights Reserved.</p><span class="footer-mark" aria-hidden="true">///</span></div></footer>
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Về đầu trang"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Xem ảnh lớn" hidden><button class="lightbox-close" type="button" aria-label="Đóng"><i class="fas fa-xmark" aria-hidden="true"></i></button><button class="lightbox-prev" type="button" aria-label="Ảnh trước"><i class="fas fa-chevron-left" aria-hidden="true"></i></button><figure><img id="lightboxImage" src="" alt="" /><figcaption id="lightboxCaption"></figcaption></figure><button class="lightbox-next" type="button" aria-label="Ảnh tiếp theo"><i class="fas fa-chevron-right" aria-hidden="true"></i></button></div>
     <script src="./assets/javascript/script.js"></script>
-    </body>
-    </html>
+  </body>
+</html>
