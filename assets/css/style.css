@@ -40,6 +40,10 @@
   .site-header .theme-toggle{align-self:auto;margin-left:12px}
 }
 
+/* Giữ tên chức danh liền mạch trên desktop; mobile vẫn cho phép xuống dòng tự nhiên. */
+.hero-role{white-space:nowrap;font-size:clamp(1.05rem,1.55vw,1.35rem)}
+@media(max-width:760px){.hero-role{white-space:normal}}
+
 @media(max-width:760px){
   .site-header .nav-container{width:calc(100% - 32px);min-height:72px;height:72px;padding:0 8px}
   .site-header .brand-logo{width:54px;height:54px;flex-basis:54px}
