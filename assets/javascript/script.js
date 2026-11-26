@@ -18,6 +18,10 @@ const galleryData = {
   ]
 };
 
+const featuredProject = `<article class="project-card reveal" data-project="lam-gia-phat"><div class="project-visual project-image-preview"><img src="./assets/img/lam-gia-phat-preview.png" alt="Ảnh chụp giao diện website Công ty Lâm Gia Phát" loading="lazy"><span>Website doanh nghiệp</span></div><div class="project-body"><span class="project-status project-status-live">ĐÃ TRIỂN KHAI</span><h3>Website thông tin điện tử Công ty Lâm Gia Phát</h3><p class="project-role">Vai trò: Phân tích yêu cầu · Thiết kế UI/UX · Phát triển website</p><p>Thiết kế và phát triển website giới thiệu doanh nghiệp, lĩnh vực hoạt động, sản phẩm, dịch vụ và hỗ trợ kết nối khách hàng.</p><div class="tags"><span>Web Development</span><span>UI/UX Design</span><span>Responsive Design</span><span>Vercel</span></div><div class="project-actions"><a class="button button-small button-primary" href="https://lam-gia-phat.vercel.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe" aria-hidden="true"></i> Truy cập website</a></div></div></article>`;
+const projectsGrid = $('.projects-grid');
+if (projectsGrid && !projectsGrid.querySelector('[data-project="lam-gia-phat"]')) projectsGrid.insertAdjacentHTML('afterbegin', featuredProject);
+
 const html = document.documentElement;
 const nav = $('.site-header');
 const navToggle = $('#navToggle');
@@ -42,7 +46,7 @@ const storedTheme = localStorage.getItem('portfolio-theme');
 setTheme(storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
 themeToggle.addEventListener('click', () => setTheme(html.dataset.theme === 'dark' ? 'light' : 'dark'));
 
-const sectionLinks = $$('.nav-links > li > a');
+const sectionLinks = $$('.nav-links > li > a[href^="#"]');
 const trackedSections = sectionLinks.map((link) => $(link.getAttribute('href'))).filter(Boolean);
 function scrollToSection(target) { const element = $(target); if (element) window.scrollTo({ top: element.offsetTop - nav.offsetHeight - 12, behavior: 'smooth' }); }
 sectionLinks.forEach((link) => link.addEventListener('click', (event) => { event.preventDefault(); scrollToSection(link.getAttribute('href')); closeMenu(); }));
